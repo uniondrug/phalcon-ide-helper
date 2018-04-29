@@ -127,7 +127,27 @@ namespace Phalcon\Forms {
 
 
 		/**
-		 * Returns the messages generated in the validation
+		 * Returns the messages generated in the validation.
+		 *
+		 * <code>
+		 * if ($form->isValid($_POST) == false) {
+		 *     // Get messages separated by the item name
+		 *     // $messages is an array of Group object
+		 *     $messages = $form->getMessages(true);
+		 *
+		 *     foreach ($messages as $message) {
+		 *         echo $message, "<br>";
+		 *     }
+		 *
+		 *     // Default behavior.
+		 *     // $messages is a Group object
+		 *     $messages = $form->getMessages();
+		 *
+		 *     foreach ($messages as $message) {
+		 *         echo $message, "<br>";
+		 *     }
+		 * }
+		 * </code>
 		 */
 		public function getMessages($byItemName=null){ }
 
